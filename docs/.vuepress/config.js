@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'vue-vi',
+    title: 'vivue',
     description: '一个基于vue的ui组件',
     themeConfig: {
       // displayAllHeaders: true ,

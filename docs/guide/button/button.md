@@ -63,17 +63,6 @@ pageClass: custom-page-class
   </section>
 
   <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <template>
-      <div class="demo-button">
-        <div>
-          <div>
-            <div class="block">
-              <el-cascader :options="options" v-model="select" @change="sss"></el-cascader>
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
     <vi-button disabled="disabled"><span>默认按钮</span></vi-button>
     <vi-button disabled="disabled" type="primary"><span>主要按钮</span></vi-button>
     <vi-button disabled="disabled" type="success"><span>成功按钮</span></vi-button>
@@ -107,23 +96,11 @@ pageClass: custom-page-class
     <vi-button icon-size="medium" icon-name="upload" circle="circle"></vi-button>
     <vi-button icon-size="medium" icon-name="download" circle="circle"></vi-button>
     <vi-button icon-size="medium" icon-name="search" circle="circle"></vi-button>
-
-    <vi-button type="primary" icon-size="small" icon-name="setting"><span>设置</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="upload"><span>上传</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="download"><span>下载</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="search"><span>搜索</span></vi-button>
-
-    <vi-button type="primary" icon-size="small" icon-name="setting" icon-position="right"><span>设置</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="upload" icon-position="right"><span>上传</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="download" icon-position="right"><span>下载</span></vi-button>
-    <vi-button type="primary" icon-size="small" icon-name="search" icon-position="right"><span>搜索</span></vi-button>
   </highlight-code>
 </Common-code-format>
 </ClientOnly>
 
-
-
-<ClientOnly>
+<!-- <ClientOnly>
 <Common-create-form>
   <thead slot="form-header" class="formHead">
       <tr class="formHeadRow">
@@ -151,4 +128,4 @@ pageClass: custom-page-class
       </tr>
   </tbody>
 </Common-create-form>
-</ClientOnly>
+</ClientOnly> -->
