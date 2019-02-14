@@ -1,5 +1,6 @@
 <template>
     <div class="icon">
+        <vi-icon vi-icon-name="info" vi-icon-size=small></vi-icon>
         <vi-icon vi-icon-name="left" vi-icon-size="small"></vi-icon>
         <vi-icon vi-icon-name="right" vi-icon-size="small"></vi-icon>
         <vi-icon vi-icon-name="download" vi-icon-size="small"></vi-icon>
@@ -10,7 +11,6 @@
 </template>
 
 <script>
-// import '../../public/svg.js'
 import Icon from '../../../../src/packages/icon/src/icon'
 export default {
     components:{

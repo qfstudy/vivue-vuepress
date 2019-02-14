@@ -16,6 +16,9 @@ export default {
 }
 </script>
 <style>
+    button{
+        /* padding: 0; */
+    }
     hr{
         border:none;
     }

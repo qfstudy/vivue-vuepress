@@ -14,13 +14,7 @@ import Button from '../../../../src/packages/button/src/button'
 export default {
     components:{
         'vi-button': Button
-    },
-    props:{
-        'icon-name':{}
     }
-    // mounted(){
-    //     console.log(this.$props)
-    // }
 }
 </script>
 <style>

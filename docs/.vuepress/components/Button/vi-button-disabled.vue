@@ -1,4 +1,3 @@
-
 <template>
     <div class="vi-button">
         <vi-button disabled="disabled"><span>默认按钮</span></vi-button>

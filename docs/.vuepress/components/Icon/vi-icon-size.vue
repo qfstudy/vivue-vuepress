@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import '../../public/svg.js'
 import Icon from '../../../../src/packages/icon/src/icon'
 export default {
     components:{

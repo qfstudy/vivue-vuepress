@@ -118,8 +118,7 @@ export default {
                     padding-right: 0.2em;
                     padding-left: 0.2em;
                 }
-            }
-            
+            } 
         }
         
         &.vi-button-primary{
@@ -151,10 +150,12 @@ export default {
             opacity: 0.8;
         }
         &.vi-button-circle{
+            padding: 0;
             .vi-button-wrapper{
                 padding: 0; 
                 .vi-button-content{
                     padding: 0;
+                    display: none;
                 }
             }
             display: inline-block;
