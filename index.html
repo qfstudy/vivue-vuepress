@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue-view</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <style>
+      .vi-row {
+        /* background: red; */
+        margin-bottom: 20px;
+      }
+      .el-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #99a9bf;
+      }
+      .bg-purple {
+        background: #d3dce6;
+      }
+      .bg-purple-light {
+        background: #e5e9f2;
+      }
+      .grid-content {
+        border: 1px solid red;
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- <div style="border:1px solid blue;height: 500px;"></div> -->
+  <div id="app">
+    <!-- <div class="icon">
+      <vi-icon class="test" vi-icon-name="info" vi-icon-size="small"></vi-icon>
+      <vi-icon vi-icon-name="search" vi-icon-size=small></vi-icon>
+      <vi-icon vi-icon-name="error" vi-icon-size=small></vi-icon>
+      <vi-icon vi-icon-name="info" vi-icon-size=small></vi-icon>
+      <vi-icon vi-icon-name="clear" vi-icon-size=small></vi-icon>
+    </div> -->
+
+    <!-- <div class="button">
+      <vi-button >默认</vi-button>
+      <vi-button type="default">默认样式</vi-button>
+      <vi-button type="primary" icon-name="upload" >主要按钮</vi-button>
+      <vi-button type="primary" icon-name="upload" icon-size="medium" circle="circle"></vi-button>
+      <vi-button type="primary" icon-name="upload" icon-position="right">主要按钮</vi-button>
+      <vi-button type="primary" icon-name="upload" icon-size="medium" circle="circle" disabled="disabled"></vi-button>
+    </div>
+
+    <div class="buttonGroup">
+      <vi-button-group>
+        <vi-icon class="ss" vi-icon-name="left" vi-icon-size=small></vi-icon>
+        <vi-icon class="ss" vi-icon-name="pause" vi-icon-size=small></vi-icon>
+        <vi-icon class="ss" vi-icon-name="right" vi-icon-size=small></vi-icon>
+      </vi-button-group>
+      <br>
+      <vi-button-group>
+          <vi-button type="primary">默认样式</vi-button>
+          <vi-button type="primary">主要按钮</vi-button>
+      </vi-button-group>
+      <br>
+      <vi-button-group>
+          <vi-button>默认样式</vi-button>
+          <vi-button >主要按钮</vi-button>
+      </vi-button-group>
+      <vi-button-group>
+          <vi-button type="primary" icon-name="left" icon-size=small>上一页</vi-button>
+          <vi-button type="primary" icon-name="loading" icon-size=small>上一页</vi-button>
+          <vi-button type="primary" icon-name="search" icon-size=small icon-position="right">下一页</vi-button>
+      </vi-button-group>
+    </div> -->
+    <!-- <hr>
+    <br> -->
+    <!-- <div class="input">
+      <vi-input placeholder="prefix" suffix-icon="info" @click="aa"></vi-input>
+      <vi-input placeholder="prefix" prefix-icon="info" @click="aa"></vi-input>
+      <vi-input placeholder="suffix" clearable suffix-icon="error" @input="yyy"></vi-input>
+      <vi-input placeholder="suffix" v-model="input1"></vi-input>
+      <vi-input placeholder="请输入内容" readonly></vi-input>
+      <vi-input placeholder="请输入内容" @change="aa"></vi-input>
+      <vi-input disabled placeholder="禁止修改"></vi-input>
+    </div> -->
+    <!-- <hr>
+    <br>
+    <br> -->
+
+    <!-- <div class="grid">
+      <vi-row class="row">
+        <vi-col class="col" :span="24">
+          <div class="grid-content bg-purple-dark">gfg</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row"  :gutter="20">
+        <vi-col class="col" :span="12">
+          <div class="grid-content bg-purple">dd</div>
+        </vi-col>
+        <vi-col class="col" :span="12">
+          <div class="grid-content bg-purple-light">s</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row"  :gutter="0">
+        <vi-col class="col" :span="8" :offse0t="0">
+          <div class="grid-content bg-purple">d</div>
+        </vi-col>
+        <vi-col class="col" :span="8" :offset="0">
+          <div class="grid-content bg-purple-light">ss</div>
+        </vi-col>
+        <vi-col class="col" :span="8" :offset="0">
+          <div class="grid-content bg-purple">g</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row" :gutter="12">
+        <vi-col class="col" :span="1" :offset="2">
+          <div class="grid-content bg-purple">r</div>
+        </vi-col>
+        <vi-col class="col" :span="4" :offset="8">
+          <div class="grid-content bg-purple-light">u</div>
+        </vi-col>
+        <vi-col class="col" :span="2" :offset="3">
+          <div class="grid-content bg-purple">o</div>
+        </vi-col>
+        <vi-col class="col" :span="3" :offset="1">
+          <div class="grid-content bg-purple-light">l</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row" :gutter="12">
+        <vi-col class="col" :span="6" >
+          <div class="grid-content bg-purple">r</div>
+        </vi-col>
+        <vi-col class="col" :span="5" >
+          <div class="grid-content bg-purple-light">o</div>
+        </vi-col>
+        <vi-col class="col" :span="9" >
+          <div class="grid-content bg-purple">l</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row" :gutter="12" :justify="'end'">
+        <vi-col class="col" :span="6" >
+          <div class="grid-content bg-purple-light">r</div>
+        </vi-col>        
+        <vi-col class="col" :span="5" >
+          <div class="grid-content bg-purple">o</div>
+        </vi-col>
+        <vi-col class="col" :span="9" >
+          <div class="grid-content bg-purple-light">l</div>
+        </vi-col>
+      </vi-row>
+      <vi-row class="row" :gutter="12" :justify="'center'">
+        <vi-col class="col" :span="6" >
+          <div class="grid-content bg-purple">r</div>
+        </vi-col>
+        <vi-col class="col" :span="5" >
+          <div class="grid-content bg-purple-light">o</div>
+        </vi-col>
+        <vi-col class="col" :span="9" >
+          <div class="grid-content bg-purple">l</div>
+        </vi-col>
+      </vi-row>
+    </div> -->
+    <!-- <hr>
+    <br> -->
+    <!-- <div class="layout">
+      <vi-container>
+        <vi-header>header</vi-header>
+        <vi-main>main</vi-main>
+        <vi-footer>footer</vi-footer>
+      </vi-container>
+      <vi-container>
+        <vi-aside>aside</vi-aside>
+        <vi-container>
+          <vi-header>header</vi-header>
+          <vi-main>main</vi-main>
+          <vi-footer>footer</vi-footer>
+        </vi-container>
+      </vi-container>
+    </div> -->
+
+    <!-- <div class="toast test">
+        <button @click="showToast">点我</button>
+        <button @click="showToast1">点我1</button>
+        <button @click="showToast2">点我2</button>
+        <button @click="showToast3">点我3</button>
+        <button @click="showToast4">点我4</button>
+    </div> -->
+    <!-- <vi-tabs class="tabs" :selected.sync="selectedTab">
+      <vi-tabs-bar color="teal" space="around" line-color="aqua">
+        <vi-tabs-item name="woman" line-color="aqua">标签1</vi-tabs-item>
+        <vi-tabs-item name="finance" line-color="aqua">标签2</vi-tabs-item>
+        <vi-tabs-item name="sport" line-color="aqua">标签3</vi-tabs-item>
+      </vi-tabs-bar>
+      <vi-tabs-body>
+        <vi-tabs-content name="woman">标签1的内容</vi-tabs-content>
+        <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
+        <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
+      </vi-tabs-body>
+    </vi-tabs>
+    <vi-tabs class="tabs" :selected.sync="selectedTab">
+        <vi-tabs-bar color="teal" space="between" line-color="aqua"> 
+          <vi-tabs-item name="woman" icon-name="loading" icon-size="small">标签1</vi-tabs-item>
+          <vi-tabs-item name="finance" icon-name="loading" icon-size="small">标签2</vi-tabs-item>
+          <vi-tabs-item name="sport" icon-name="loading" icon-size="small">标签3</vi-tabs-item>
+        </vi-tabs-bar>
+        <vi-tabs-body>
+          <vi-tabs-content name="woman">标签1的内容</vi-tabs-content>
+          <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
+          <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
+        </vi-tabs-body>
+      </vi-tabs>
+    <vi-tabs class="tabs" :selected.sync="selectedTab">
+        <vi-tabs-bar color="teal" space="center" line-color="aqua">
+          <vi-tabs-item name="woman" icon-name="search" icon-size="large" position="right">标签1</vi-tabs-item>
+          <vi-tabs-item name="finance" icon-name="search" icon-size="large" position="right">标签2</vi-tabs-item>
+          <vi-tabs-item name="sport" icon-name="search" icon-size="large" position="right">标签3</vi-tabs-item>
+        </vi-tabs-bar>
+        <vi-tabs-body>
+          <vi-tabs-content name="woman">标签1的内容</vi-tabs-content>
+          <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
+          <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
+        </vi-tabs-body>
+      </vi-tabs>
+      <vi-tabs class="tabs" :selected.sync="selectedTab">
+          <vi-tabs-bar color="teal" space="end" line-color="aqua">
+            <vi-tabs-item name="woman" icon-name="error"  position="top">标签1</vi-tabs-item>
+            <vi-tabs-item name="finance" icon-name="error" position="top">标签2</vi-tabs-item>
+            <vi-tabs-item name="sport" icon-name="error"  position="top">标签3</vi-tabs-item>
+          </vi-tabs-bar>
+          <vi-tabs-body>
+            <vi-tabs-content name="woman">标签1的内容</vi-tabs-content>
+            <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
+            <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
+          </vi-tabs-body>
+        </vi-tabs> -->
+        <div class="popover" style="padding: 50px;border: 1px solid greenyellow;">
+          <vi-popover position="top">
+            <template slot="content">
+              <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+          <vi-popover position="bottom">
+            <template slot="content">
+              <div>popoverhjkfdhforiegjiiogjjjjjjjjjjjjjjkdf</div>
+            </template>
+            <vi-button>点击</vi-button>
+          </vi-popover>
+          <vi-popover position="left">
+            <template slot="content">
+              <div>popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+          <vi-popover position="right">
+            <template slot="content">
+              <div>popover内容popover内容popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+        </div>
+
+        <div class="popover" style="overflow: hidden;padding-top: 50px;border: 1px solid greenyellow;">
+          <vi-popover position="bottom" trigger="hover">
+            <template slot="content">
+              <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+          <vi-popover trigger="hover">
+            <template slot="content" >
+              <div>popoverhjkfdhforiegjiiogjjjjjjjjjjjjjjkdf</div>
+            </template>
+            <vi-button>点击</vi-button>
+          </vi-popover>
+          <vi-popover position="left" trigger="hover">
+            <template slot="content">
+              <div>popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+          <vi-popover position="right" trigger="hover">
+            <template slot="content">
+              <div>popover内容popover内容popover内容</div>
+            </template>
+            <vi-button type="primary">点击</vi-button>
+          </vi-popover>
+        </div>
+        
+
+         <!-- <div class="collapse" style="padding: 100px;">
+           <vi-collapse :selected.sync="selectedCola">
+             <vi-collapse-item title="标题1" name="1">内容1</vi-collapse-item>
+             <vi-collapse-item title="标题2" name="2">内容2</vi-collapse-item>
+             <vi-collapse-item title="标题3" name="3">内容3</vi-collapse-item>
+           </vi-collapse>
+           {{selectedCola}}
+           <br>
+           <vi-collapse :selected.sync="selectedCola1" single>
+            <vi-collapse-item title="标题1" name="1">内容1</vi-collapse-item>
+            <vi-collapse-item title="标题2" name="2">内容2</vi-collapse-item>
+            <vi-collapse-item title="标题3" name="3">内容3</vi-collapse-item>
+          </vi-collapse>
+          {{selectedCola1}}
+          <br>
+           <vi-collapse :selected.sync="selectedCola2" single>
+            <vi-collapse-item title="标题1" name="1">内容1</vi-collapse-item>
+            <vi-collapse-item title="标题2" name="2">内容2</vi-collapse-item>
+            <vi-collapse-item title="标题3" name="3">内容3</vi-collapse-item>
+          </vi-collapse>
+          {{selectedCola2}}
+         </div> -->
+      </div>
+</body>
+
+</html>
