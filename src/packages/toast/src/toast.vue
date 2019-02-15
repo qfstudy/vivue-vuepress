@@ -17,6 +17,9 @@
 import Icon from '../../icon/src/icon'
 export default {
     name:'ViToast',
+    components:{
+        viIcon: Icon
+    },
     props:{
         message:{
             type: String

@@ -13,7 +13,7 @@
     }
   </style>
   <style>
-      /* .vi-row {
+      .vi-row {
         margin-bottom: 20px;
       }
       .el-col {
@@ -36,7 +36,13 @@
       .row-bg {
         padding: 10px 0;
         background-color: #f9fafc;
-      } */
+      }
+
+      .tabs{
+        /* background: red; */
+        margin-left: 25px;
+        /* padding: 50px; */
+      }
     </style>
 </head>
 
@@ -168,9 +174,9 @@
         </vi-col>
       </vi-row>
     </div> -->
-    <!-- <hr>
-    <br> -->
-    <!-- <div class="layout">
+    <hr>
+    <br>
+    <div class="layout">
       <vi-container>
         <vi-header>header</vi-header>
         <vi-main>main</vi-main>
@@ -184,16 +190,17 @@
           <vi-footer>footer</vi-footer>
         </vi-container>
       </vi-container>
-    </div> -->
+    </div>
 
-    <!-- <div class="toast test">
+    <div class="toast test">
         <button @click="showToast">点我</button>
         <button @click="showToast1">点我1</button>
         <button @click="showToast2">点我2</button>
         <button @click="showToast3">点我3</button>
         <button @click="showToast4">点我4</button>
-    </div> -->
-    <!-- <vi-tabs class="tabs" :selected.sync="selectedTab">
+    </div>
+
+    <vi-tabs class="tabs" :selected.sync="selectedTab">
       <vi-tabs-bar color="teal" space="around" line-color="aqua">
         <vi-tabs-item name="woman" line-color="aqua">标签1</vi-tabs-item>
         <vi-tabs-item name="finance" line-color="aqua">标签2</vi-tabs-item>
@@ -240,8 +247,8 @@
             <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
             <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
           </vi-tabs-body>
-        </vi-tabs> -->
-        <!-- <div class="popover" style="padding: 50px;border: 1px solid greenyellow;">
+        </vi-tabs>
+        <div class="popover" style="padding: 50px;border: 1px solid greenyellow;">
           <vi-popover position="top">
             <template slot="content">
               <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
@@ -293,7 +300,7 @@
             </template>
             <vi-button type="primary">点击</vi-button>
           </vi-popover>
-        </div> -->
+        </div>
         
 
          <!-- <div class="collapse" style="padding: 100px;">

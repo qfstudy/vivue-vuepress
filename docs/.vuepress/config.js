@@ -25,7 +25,12 @@ module.exports = {
         },
         ['./guide/icon/icon','icon'],
         ['./guide/button/button','button'],
-        ['./guide/input/input','input']
+        ['./guide/input/input','input'],
+        ['./guide/grid/grid','grid'],
+        ['./guide/layout/layout','layout'],
+        ['./guide/toast/toast','toast'],
+        ['./guide/tab/tab','tab'],
+        ['./guide/popover/popover','popover'],
       ],
       repo: 'qfstudy/vi-vue',
       repoLabel: 'Github',
