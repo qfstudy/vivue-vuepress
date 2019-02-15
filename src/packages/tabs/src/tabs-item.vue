@@ -20,6 +20,9 @@ export default {
             fontColor: ''
         }
     },
+    components:{
+        viIcon: Icon
+    },
     props:{
         name:{
             type:String|Number,
