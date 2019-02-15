@@ -31,6 +31,7 @@ module.exports = {
         ['./guide/toast/toast','toast'],
         ['./guide/tab/tab','tab'],
         ['./guide/popover/popover','popover'],
+        ['./guide/collapse/collapse','collapse'],
       ],
       repo: 'qfstudy/vi-vue',
       repoLabel: 'Github',

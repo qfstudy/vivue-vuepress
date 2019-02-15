@@ -42,8 +42,7 @@ export default {
             // console.log(names,single)            
             if(names.indexOf(this.name)>=0){
                 if(single&&names.length>1){
-                    // console.log('展示的内容不能多选')
-                    throw console.error('single为true,默认展示的内容只能有一个');
+                    console.error('single为true,默认展示的内容只能有一个');
                 }else{
                     this.open=true   
                 }                            
