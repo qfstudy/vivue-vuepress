@@ -4,6 +4,8 @@
         <vi-button icon-size="medium" icon-name="upload" circle="circle"></vi-button>
         <vi-button icon-size="medium" icon-name="download" circle="circle"></vi-button>
         <vi-button icon-size="medium" icon-name="search" circle="circle"></vi-button>
+        <vi-button icon-size="medium" icon-name="share" circle="circle"></vi-button>
+        <vi-button icon-size="medium" icon-name="calendar" circle="circle"></vi-button>
     </div>
 </template>
 
@@ -15,10 +17,7 @@ export default {
     }
 }
 </script>
-<style>
-    button{
-        /* padding: 0; */
-    }
+<style scoped>
     hr{
         border:none;
     }
