@@ -41,7 +41,12 @@ export default {
     mounted(){
         this.setBackground()
         this.eventBus.$on("update:selected",(name,vm)=>{
+            // console.log(vm.$el)
+            let left1=this.$refs.bar.getBoundingClientRect().left
+            // console.log(left1)
             let{left,width,height,right}=vm.$el.getBoundingClientRect()
+            // console.log(left,width)
+            left=left-left1
             if(this.lineColor){
                 this.$refs.line.style.width=width+'px'
                 this.$refs.line.style.height=2+'px'
@@ -56,7 +61,7 @@ export default {
 <style lang="scss" scoped>
     .vi-tabs-bar-wrapper{
         .vi-tabs-bar{
-            display: flex;    
+            display: flex; 
             &.vi-tabs-bar-end{
                 justify-content: flex-end;
             }
