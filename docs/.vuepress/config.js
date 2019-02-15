@@ -25,6 +25,7 @@ module.exports = {
         },
         ['./guide/icon/icon','icon'],
         ['./guide/button/button','button'],
+        ['./guide/input/input','input']
       ],
       repo: 'qfstudy/vi-vue',
       repoLabel: 'Github',

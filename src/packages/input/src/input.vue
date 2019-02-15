@@ -43,8 +43,12 @@
 </template>
 
 <script>
+import Icon from '../../icon/src/icon'
 export default {
     name: 'viInput',
+    components:{
+        'vi-icon':Icon
+    },
     data(){
         return{
             currentValue: this.value,
