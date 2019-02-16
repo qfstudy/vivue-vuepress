@@ -21,8 +21,8 @@ import Col from '../../../../src/packages/grid/src/col'
 import Row from '../../../../src/packages/grid/src/row'
 export default {
   components:{
-    'vi-col': Col,
-    'vi-row': Row
+    viCol: Col,
+    viRow: Row
   }
 }
 </script>

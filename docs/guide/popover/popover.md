@@ -1,5 +1,5 @@
 ---
-title: 'icon'
+title: 'popover'
 pageClass: custom-page-class
 ---
 <ClientOnly>
@@ -7,7 +7,7 @@ pageClass: custom-page-class
 
   <div slot="componentNameTitle" class="component">
     <header class="component-name">
-      Icon图标
+      popover
     </header>
     <p class="component-text">
       提供了一套常用的图标集合以及能够更方便地添加自己想在页面中引用的图标，可以根据自己的实际需求对图标进行扩展。
@@ -33,7 +33,7 @@ pageClass: custom-page-class
   </div>
 
   <div slot="showComponents" class="vi-show-component">
-    
+    <Popover-vi-popover/>
   </div>
 
   <section slot="paraDescription" class="vi-code-description">
@@ -49,32 +49,6 @@ pageClass: custom-page-class
     <vi-icon vi-icon-name="upload" vi-icon-size="small"></vi-icon>
     <vi-icon vi-icon-name="search" vi-icon-size="small"></vi-icon>
     <vi-icon vi-icon-name="setting" vi-icon-size="small"></vi-icon>   
-  </highlight-code>
-</Common-code-format>
-</ClientOnly>
-
-<ClientOnly>
-<Common-code-format>
-  <div slot="description">
-    <hr>
-  </div>
-  <div slot="showComponents" class="vi-show-component">
-    <Tab-vi-tab/>
-  </div>
-
-  <section slot="paraDescription" class="vi-code-description">
-    <p class="vi-paraStyle-wrapper">
-      <span class="vi-paraStyle">vi-icon-size:medium</span>
-    </p>
-  </section>
-
-  <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <vi-icon vi-icon-name="left" vi-icon-size="medium"></vi-icon>
-    <vi-icon vi-icon-name="right" vi-icon-size="medium"></vi-icon>
-    <vi-icon vi-icon-name="download" vi-icon-size="medium"></vi-icon>
-    <vi-icon vi-icon-name="upload" vi-icon-size="medium"></vi-icon>
-    <vi-icon vi-icon-name="search" vi-icon-size="medium"></vi-icon>
-    <vi-icon vi-icon-name="setting" vi-icon-size="medium"></vi-icon>   
   </highlight-code>
 </Common-code-format>
 </ClientOnly>

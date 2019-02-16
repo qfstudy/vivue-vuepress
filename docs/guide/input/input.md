@@ -1,13 +1,12 @@
 ---
-title: 'icon'
+title: 'input'
 pageClass: custom-page-class
 ---
 <ClientOnly>
 <Common-code-format>
-
   <div slot="componentNameTitle" class="component">
     <header class="component-name">
-      Icon图标
+      Input
     </header>
     <p class="component-text">
       提供了一套常用的图标集合以及能够更方便地添加自己想在页面中引用的图标，可以根据自己的实际需求对图标进行扩展。

@@ -56,8 +56,8 @@
     </div>
 
     <div class="button">
-      <vi-button >默认</vi-button>
-      <vi-button type="default">默认样式</vi-button>
+      <vi-button type="primary">默认按钮</vi-button>
+      <!-- <vi-button type="default">默认样式</vi-button> -->
       <vi-button type="primary" icon-name="upload" >主要按钮</vi-button>
       <vi-button type="primary" icon-name="upload" icon-size="medium" circle="circle"></vi-button>
       <vi-button type="primary" icon-name="upload" icon-position="right">主要按钮</vi-button>
@@ -236,18 +236,7 @@
           <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
         </vi-tabs-body>
       </vi-tabs>
-      <vi-tabs class="tabs" :selected.sync="selectedTab">
-          <vi-tabs-bar color="teal" space="end" line-color="aqua">
-            <vi-tabs-item name="woman" icon-name="error"  position="top">标签1</vi-tabs-item>
-            <vi-tabs-item name="finance" icon-name="error" position="top">标签2</vi-tabs-item>
-            <vi-tabs-item name="sport" icon-name="error"  position="top">标签3</vi-tabs-item>
-          </vi-tabs-bar>
-          <vi-tabs-body>
-            <vi-tabs-content name="woman">标签1的内容</vi-tabs-content>
-            <vi-tabs-content name="finance">标签2的内容</vi-tabs-content>
-            <vi-tabs-content name="sport">标签3的内容</vi-tabs-content>
-          </vi-tabs-body>
-        </vi-tabs>
+     
         <div class="popover" style="padding: 50px;border: 1px solid greenyellow;">
           <vi-popover position="top">
             <template slot="content">
