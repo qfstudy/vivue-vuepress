@@ -21,10 +21,8 @@ export default {
     props:{
         type:{
             type: String,
-            default:'default',
             validator (value) {
                 return [
-                    'default',
                     'primary',
                     'success',
                     'info',

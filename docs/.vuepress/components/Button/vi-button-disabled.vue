@@ -1,11 +1,11 @@
 <template>
     <div class="vi-button">
-        <vi-button disabled="disabled"><span>默认按钮</span></vi-button>
-        <vi-button disabled="disabled" type="primary"><span>主要按钮</span></vi-button>
-        <vi-button disabled="disabled" type="success"><span>成功按钮</span></vi-button>
-        <vi-button disabled="disabled" type="info"><span>信息按钮</span></vi-button>
-        <vi-button disabled="disabled" type="warning"><span>警告按钮</span></vi-button>
-        <vi-button disabled="disabled" type="danger"></spa>危险按钮</span></vi-button>
+        <vi-button disabled="disabled">默认按钮</vi-button>
+        <vi-button disabled="disabled" type="primary">主要按钮</vi-button>
+        <vi-button disabled="disabled" type="success">成功按钮</vi-button>
+        <vi-button disabled="disabled" type="info">信息按钮</vi-button>
+        <vi-button disabled="disabled" type="warning">警告按钮</vi-button>
+        <vi-button disabled="disabled" type="danger">危险按钮</vi-button>
     </div>
 </template>
 
