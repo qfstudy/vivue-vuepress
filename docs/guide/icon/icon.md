@@ -93,17 +93,17 @@ pageClass: custom-page-class
   <tbody slot="form-body" class="formBody">
       <tr class="formBodyRow">
           <td class="formBodyCol">vi-icon-name</td>
-          <td class="formBodyCol">设置自定义图标</td>
+          <td class="formBodyCol">图标类名</td>
           <td class="formBodyCol">String</td>
-          <td class="formBodyCol">按组件约定设置图标名字</td>
+          <td class="formBodyCol">按组件约定取值</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">vi-icon-size</td>
           <td class="formBodyCol">尺寸</td>
           <td class="formBodyCol">String</td>
-          <td class="formBodyCol">default/small/medium/large</td>
-          <td class="formBodyCol">default</td>
+          <td class="formBodyCol">small/medium/large</td>
+          <td class="formBodyCol">—</td>
       </tr>
   </tbody>
 </Common-create-form>

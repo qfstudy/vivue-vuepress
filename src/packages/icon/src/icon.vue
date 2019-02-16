@@ -13,10 +13,8 @@ export default {
         },
         viIconSize:{
             type: String,
-            default: 'default',
             validator(value){
                 return[
-                    'default',
                     'small',
                     'medium',
                     'large'
