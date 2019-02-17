@@ -23,15 +23,15 @@ module.exports = {
           title: '组件',
           collapsable: false
         },
-        ['./guide/icon/icon','icon'],
-        ['./guide/button/button','button'],
-        ['./guide/input/input','input'],
-        ['./guide/grid/grid','grid'],
-        ['./guide/layout/layout','layout'],
+        ['./guide/icon/icon','icon 图标'],
+        ['./guide/button/button','button 按钮'],
+        ['./guide/input/input','input 输入框'],
+        ['./guide/grid/grid','grid 布局'],
+        ['./guide/layout/layout','layout 容器布局'],
         ['./guide/toast/toast','toast'],
-        ['./guide/tab/tab','tab'],
-        ['./guide/popover/popover','popover'],
-        ['./guide/collapse/collapse','collapse']
+        ['./guide/tab/tab','tab 标签'],
+        ['./guide/popover/popover','popover 弹出框'],
+        ['./guide/collapse/collapse','collapse 折叠面板']
       ],
       repo: 'qfstudy/vi-vue',
       repoLabel: 'Github',
