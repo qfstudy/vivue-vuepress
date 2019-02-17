@@ -50,7 +50,7 @@ Vue.component('vi-collapse-item',CollapseItem)
 new Vue({
   el: '#app',
   data:{
-    input1:'in',
+    input1:'双向绑定',
     selectedTab:'sport',//tabs组件
     selectedCola: ['2','1'],
     selectedCola1: ['2','3'],

@@ -1,6 +1,6 @@
 <template>
     <div class="vi-input">
-      <vi-input placeholder="请输入内容" v-model="input"></vi-input>
+      <vi-input placeholder="请输入内容" v-model="input2" clearable suffix-icon="error"></vi-input>
     </div>
 </template>
 
@@ -9,7 +9,7 @@ import Input from '../../../../src/packages/input/src/input'
 export default {
   data(){
     return{
-      input: ''
+      input2: ''
     }
   },
   components:{
@@ -17,3 +17,5 @@ export default {
   }
 }
 </script>
+<style scoped>
+</style>

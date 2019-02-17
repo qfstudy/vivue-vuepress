@@ -89,12 +89,12 @@
     <hr>
     <br>
     <div class="input">
-      <vi-input placeholder="prefix" suffix-icon="info" @click="aa"></vi-input>
-      <vi-input placeholder="prefix" prefix-icon="info" @click="aa"></vi-input>
-      <vi-input placeholder="suffix" clearable suffix-icon="error" @input="yyy"></vi-input>
-      <vi-input placeholder="suffix" v-model="input1"></vi-input>
-      <vi-input placeholder="请输入内容" readonly></vi-input>
-      <vi-input placeholder="请输入内容" @change="aa"></vi-input>
+      <vi-input placeholder="图标靠右" suffix-icon="info" @click="aa"></vi-input>
+      <vi-input placeholder="图标靠左" prefix-icon="info" @click="aa"></vi-input>
+      <vi-input placeholder="可清除" clearable suffix-icon="error" @input="yyy"></vi-input>
+      <vi-input placeholder="双向绑定" v-model="input1"></vi-input>
+      <vi-input placeholder="只读" readonly></vi-input>
+      <vi-input placeholder="普通输入框" @change="aa"></vi-input>
       <vi-input disabled placeholder="禁止修改"></vi-input>
     </div>
     <hr>
