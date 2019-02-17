@@ -7,28 +7,23 @@ pageClass: custom-page-class
 
   <div slot="componentNameTitle" class="component">
     <header class="component-name">
-      layout
+      layout布局
     </header>
     <p class="component-text">
-      提供了一套常用的图标集合以及能够更方便地添加自己想在页面中引用的图标，可以根据自己的实际需求对图标进行扩展。
+    方便快速搭建页面的基本结构。
     </p>
   </div>
 
   <div slot="description">
     <header class="vi-description-title">
-      使用方法
+      基础用法
     </header>
     <p class="vi-description-text">
-      使用<span class="add-color">&ltvi-icon/&gt</span>组件需要全局或是在引入<span class="add-color">&ltvi-icon/&gt</span>组件的组件中引入<span class="add-color">js</span>文件，例如:<span class="add-color">import './packages/common/svg.js'</span>。
-    </p>
-    <p class="vi-description-text">
-      这个<span class="add-color">js</span>文件是根据<a class="add-color" href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>的<span class="add-color">symbol引用</span>生成的<span class="add-color">js</span>文件。具体方法请访问：<a class="add-color"href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>。
-    </p>
-    <p class="vi-description-text">
-      <span class="noteColor">需要注意的是：</span>在<a class="add-color" href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>创建图标项目时，需要对每一个icon重新命名。icon命名的格式类似于<span class="add-color">vi-xxx</span>的形式，必须以<span class="add-color">vi-</span>开头，<span class="add-color">xxx</span>可以自定义。例如：<span class="add-color">vi-search</span>表示搜索框图标。
-    </p>
-    <p class="vi-description-text">
-      设置属性<span class="add-color">vi-icon-name</span>可以指定图标，其属性值就是上文提到的<span class="add-color">xxx</span>。例如：如果一个搜索图框的命名为<span class="add-color">vi-search</span>，可以这样引入图标：<span class="add-color">&ltvi-icon vi-icon-name="search"&gt&lt/vi-icon&gt</span>
+      <span class="add-color">&ltvi-container/&gt</span>外层容器。当子元素中不包含<span class="add-color">&ltvi-aside/&gt</span> 时，全部子元素会垂直上下排列，否则会水平左右排列。<span class="add-color">&ltvi-header/&gt</span>：顶栏容器。
+      <span class="add-color">&ltvi-aside/&gt</span>：侧边栏容器。
+      <span class="add-color">&ltvi-main/&gt</span>：主要区域容器。
+      <span class="add-color">&ltvi-footer/&gt</span>：底栏容器。
+      <h5>以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，&ltel-container&gt 的子元素只能是后四者，后四者的父元素也只能是 &ltel-container&gt。</h5>
     </p>
   </div>
 
@@ -43,42 +38,84 @@ pageClass: custom-page-class
   </section>
 
   <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <vi-icon vi-icon-name="left" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="right" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="download" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="upload" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="search" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="setting" vi-icon-size="small"></vi-icon>   
+    <vi-container>
+      <vi-header>header</vi-header>
+      <vi-main>main</vi-main>
+    </vi-container>
+    
+    <vi-container>
+      <vi-header>header</vi-header>
+      <vi-main>main</vi-main>
+      <vi-footer>footer</vi-footer>
+    </vi-container>
+    
+    <vi-container>
+      <vi-aside width="200px">Aside</vi-aside>
+      <vi-main>Main</vi-main>
+    </vi-container>
+    
+    <vi-container>
+      <vi-header>Header</vi-header>
+      <vi-container>
+        <vi-aside width="200px">Aside</vi-aside>
+        <vi-main>Main</vi-main>
+      </vi-container>
+    </vi-container>
+    
+    <vi-container>
+      <vi-header>Header</vi-header>
+      <vi-container>
+        <vi-aside width="200px">Aside</vi-aside>
+        <vi-container>
+          <vi-main>Main</vi-main>
+          <vi-footer>Footer</vi-footer>
+        </vi-container>
+      </vi-container>
+    </vi-container> 
+    
+    <vi-container>
+      <vi-aside width="200px">Aside</vi-aside>
+      <vi-container>
+        <vi-header>Header</vi-header>
+        <vi-main>Main</vi-main>
+      </vi-container>
+    </vi-container>
+    
+    <vi-container>
+      <vi-aside width="200px">Aside</vi-aside>
+      <vi-container>
+        <vi-header>Header</vi-header>
+        <vi-main>Main</vi-main>
+        <vi-footer>Footer</vi-footer>
+      </vi-container>
+    </vi-container>
+
+    <style>
+      .vi-header, .vi-footer {
+        background-color: #B3C0D1;
+        color: #333;
+        text-align: center;
+        line-height: 60px;
+      }
+      
+      .vi-aside {
+        background-color: #D3DCE6;
+        color: #333;
+        text-align: center;
+        line-height: 200px;
+      }
+      
+      .vi-main {
+        background-color: #E9EEF3;
+        color: #333;
+        text-align: center;
+        line-height: 160px;
+      }
+      
+      body > .vi-container {
+        margin-bottom: 40px;
+      }
+    </style>
   </highlight-code>
 </Common-code-format>
-</ClientOnly>
-
-<ClientOnly>
-<Common-create-form>
-  <thead slot="form-header" class="formHead">
-      <tr class="formHeadRow">
-          <th class="formHeadCol">参数</th>
-          <th class="formHeadCol">说明</th>
-          <th class="formHeadCol">类型</th>
-          <th class="formHeadCol">可选值</th>
-          <th class="formHeadCol">默认值值</th>
-      </tr>
-  </thead>
-  <tbody slot="form-body" class="formBody">
-      <tr class="formBodyRow">
-          <td class="formBodyCol">vi-icon-name</td>
-          <td class="formBodyCol">设置自定义图标</td>
-          <td class="formBodyCol">String</td>
-          <td class="formBodyCol">按组件约定设置图标名字</td>
-          <td class="formBodyCol">—</td>
-      </tr>
-      <tr class="formBodyRow">
-          <td class="formBodyCol">vi-icon-size</td>
-          <td class="formBodyCol">尺寸</td>
-          <td class="formBodyCol">String</td>
-          <td class="formBodyCol">default/small/medium/large</td>
-          <td class="formBodyCol">default</td>
-      </tr>
-  </tbody>
-</Common-create-form>
 </ClientOnly>
