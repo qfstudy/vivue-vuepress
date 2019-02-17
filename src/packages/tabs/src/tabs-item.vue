@@ -30,8 +30,9 @@ export default {
         },
         position:{
             type: String,
+            default: 'left',
             validator(value){
-                return['right','top'].indexOf(value)>-1
+                return['left','right'].indexOf(value)>-1
             }
         },
         iconName:{
@@ -39,6 +40,7 @@ export default {
         },
         iconSize:{
             type: String,
+            default: "small"
         }
     },
     
@@ -51,7 +53,6 @@ export default {
         setFontColor(){
             Vue.nextTick(()=>{
                 if(this.active&&!this.iconName){
-                    // this.$refs.font.style.background=`${this.fontColor}`
                     this.$refs.fontColor.style.color=`${this.fontColor}`
                 }else if(!this.iconName){
                     this.$refs.fontColor.style.color=''
