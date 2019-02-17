@@ -9,7 +9,8 @@ export default {
     name:'ViRow',
     props:{
         gutter:{
-            type:[Number]
+            type:[Number],
+            default: 0
         },
         justify:{
             type:[String],

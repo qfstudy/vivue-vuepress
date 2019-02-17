@@ -7,29 +7,18 @@ pageClass: custom-page-class
 
   <div slot="componentNameTitle" class="component">
     <header class="component-name">
-      grid
+      grid布局
     </header>
     <p class="component-text">
-      提供了一套常用的图标集合以及能够更方便地添加自己想在页面中引用的图标，可以根据自己的实际需求对图标进行扩展。
+      根据 24 分栏，可以简便地布局。
     </p>
   </div>
 
   <div slot="description">
     <header class="vi-description-title">
-      使用方法
+      基础布局
     </header>
-    <p class="vi-description-text">
-      使用<span class="add-color">&ltvi-icon/&gt</span>组件需要全局或是在引入<span class="add-color">&ltvi-icon/&gt</span>组件的组件中引入<span class="add-color">js</span>文件，例如:<span class="add-color">import './packages/common/svg.js'</span>。
-    </p>
-    <p class="vi-description-text">
-      这个<span class="add-color">js</span>文件是根据<a class="add-color" href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>的<span class="add-color">symbol引用</span>生成的<span class="add-color">js</span>文件。具体方法请访问：<a class="add-color"href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>。
-    </p>
-    <p class="vi-description-text">
-      <span class="noteColor">需要注意的是：</span>在<a class="add-color" href="http://www.iconfont.cn" target="_black">阿里巴巴矢量图标库</a>创建图标项目时，需要对每一个icon重新命名。icon命名的格式类似于<span class="add-color">vi-xxx</span>的形式，必须以<span class="add-color">vi-</span>开头，<span class="add-color">xxx</span>可以自定义。例如：<span class="add-color">vi-search</span>表示搜索框图标。
-    </p>
-    <p class="vi-description-text">
-      设置属性<span class="add-color">vi-icon-name</span>可以指定图标，其属性值就是上文提到的<span class="add-color">xxx</span>。例如：如果一个搜索图框的命名为<span class="add-color">vi-search</span>，可以这样引入图标：<span class="add-color">&ltvi-icon vi-icon-name="search"&gt&lt/vi-icon&gt</span>
-    </p>
+    使用单一分栏创建基础的栅格布局。
   </div>
 
   <div slot="showComponents" class="vi-show-component">
@@ -38,20 +27,344 @@ pageClass: custom-page-class
 
   <section slot="paraDescription" class="vi-code-description">
     <p class="vi-paraStyle-wrapper">
-      使用<span class="vi-paraStyle">vi-icon-name</span>属性选择图标。<span class="vi-paraStyle">vi-icon-size</span>指定Icon图标的尺寸，默认值为<span class="vi-paraStyle">default</span>，可选值有<span class="vi-paraStyle">small</span>、<span class="vi-paraStyle">medium</span>、<span class="vi-paraStyle">large</span>。
+      通过 row 和 col 组件，并通过 col 组件的 <span class="vi-paraStyle">span</span>属性我们就可以自由地组合布局。
     </p>
   </section>
 
   <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <vi-icon vi-icon-name="left" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="right" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="download" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="upload" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="search" vi-icon-size="small"></vi-icon>
-    <vi-icon vi-icon-name="setting" vi-icon-size="small"></vi-icon>   
+    <vi-row>
+      <vi-col :span="24"><div class="grid-content bg-purple-dark"></div></vi-col>
+    </vi-row>
+    <vi-row>
+      <vi-col :span="12"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="12"><div class="grid-content bg-purple-light"></div></vi-col>
+    </vi-row>
+    <vi-row>
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="8"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+    </vi-row>
+    <vi-row>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
+    </vi-row>
+
+    <style>
+      .vi-row {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .vi-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #7aa9bf;
+      }
+      .bg-purple {
+        background: #badce6;
+      }
+      .bg-purple-light {
+        background: #cce9f2;
+      }
+      .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>  
   </highlight-code>
 </Common-code-format>
 </ClientOnly>
+
+<ClientOnly>
+<Common-code-format>
+
+  <div slot="description">
+    <header class="vi-description-title">
+      分栏间隔
+    </header>
+    分栏之间存在间隔。
+  </div>
+
+  <div slot="showComponents" class="vi-show-component">
+    <Grid-vi-grid-gutter/>
+  </div>
+
+  <section slot="paraDescription" class="vi-code-description">
+    <p class="vi-paraStyle-wrapper">
+      Row 组件提供<span class="vi-paraStyle">gutter</span>属性来指定每一栏之间的间隔，默认间隔为 0。 
+    </p>
+  </section>
+
+  <highlight-code class="codeStyle" slot="showCode" lang="vue">
+    <vi-row :gutter="20">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    
+    <style>
+      .vi-row {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .vi-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #7aa9bf;
+      }
+      .bg-purple {
+        background: #badce6;
+      }
+      .bg-purple-light {
+        background: #cce9f2;
+      }
+      .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>  
+  </highlight-code>
+</Common-code-format>
+</ClientOnly>
+
+<ClientOnly>
+<Common-code-format>
+
+  <div slot="description">
+    <header class="vi-description-title">
+      混合布局
+    </header>
+    通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。
+  </div>
+
+  <div slot="showComponents" class="vi-show-component">
+    <Grid-vi-grid-mix/>
+  </div>
+
+  <section slot="paraDescription" class="vi-code-description">
+    <p class="vi-paraStyle-wrapper">
+      属性gutter和属性span组合可以实现不同的布局。
+    </p>
+  </section>
+
+  <highlight-code class="codeStyle" slot="showCode" lang="vue">
+    <vi-row :gutter="20">
+      <vi-col :span="16"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row :gutter="20">
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row :gutter="20">
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="16"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    
+    <style>
+      .vi-row {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .vi-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #7aa9bf;
+      }
+      .bg-purple {
+        background: #badce6;
+      }
+      .bg-purple-light {
+        background: #cce9f2;
+      }
+      .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>  
+  </highlight-code>
+</Common-code-format>
+</ClientOnly>
+
+<ClientOnly>
+<Common-code-format>
+
+  <div slot="description">
+    <header class="vi-description-title">
+      分栏偏移
+    </header>
+    支持偏移指定的比例。
+  </div>
+
+  <div slot="showComponents" class="vi-show-component">
+    <Grid-vi-grid-offset/>
+  </div>
+
+  <section slot="paraDescription" class="vi-code-description">
+    <p class="vi-paraStyle-wrapper">
+      通过 col 组件提供<span class="vi-paraStyle">offset</span>属性可以指定分栏偏移的比例。
+    </p>
+  </section>
+
+  <highlight-code class="codeStyle" slot="showCode" lang="vue">
+    <vi-row :gutter="20">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row :gutter="20">
+      <vi-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row :gutter="20">
+      <vi-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    
+    <style>
+      .vi-row {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .vi-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #7aa9bf;
+      }
+      .bg-purple {
+        background: #badce6;
+      }
+      .bg-purple-light {
+        background: #cce9f2;
+      }
+      .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>  
+  </highlight-code>
+</Common-code-format>
+</ClientOnly>
+
+<ClientOnly>
+<Common-code-format>
+
+  <div slot="description">
+    <header class="vi-description-title">
+      对齐方式
+    </header>
+    通过 flex 布局来对分栏进行灵活的对齐。
+  </div>
+
+  <div slot="showComponents" class="vi-show-component">
+    <Grid-vi-grid-flex/>
+  </div>
+
+  <section slot="paraDescription" class="vi-code-description">
+    <p class="vi-paraStyle-wrapper">
+      通过<span class="vi-paraStyle">justify</span>属性来指定<span class="vi-paraStyle">end</span>，<span class="vi-paraStyle">center</span>，<span class="vi-paraStyle">between</span>，<span class="vi-paraStyle">around</span>其中的值来定义子元素的排版方式，默认值为<span class="vi-paraStyle">start</span>。
+    </p>
+  </section>
+
+  <highlight-code class="codeStyle" slot="showCode" lang="vue">
+    <vi-row class="row-bg">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row class="row-bg" justify="center">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row class="row-bg" justify="end">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row class="row-bg" justify="between">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    <vi-row class="row-bg" justify="around">
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
+    </vi-row>
+    
+    <style>
+      .vi-row {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .vi-col {
+        border-radius: 4px;
+      }
+      .bg-purple-dark {
+        background: #7aa9bf;
+      }
+      .bg-purple {
+        background: #badce6;
+      }
+      .bg-purple-light {
+        background: #cce9f2;
+      }
+      .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+      }
+      .row-bg {
+        padding: 10px 0;
+        background-color: #f9fafc;
+      }
+    </style>  
+  </highlight-code>
+</Common-code-format>
+</ClientOnly>
+
+### Row Attributes
 
 <ClientOnly>
 <Common-create-form>
@@ -66,18 +379,50 @@ pageClass: custom-page-class
   </thead>
   <tbody slot="form-body" class="formBody">
       <tr class="formBodyRow">
-          <td class="formBodyCol">vi-icon-name</td>
-          <td class="formBodyCol">设置自定义图标</td>
-          <td class="formBodyCol">String</td>
-          <td class="formBodyCol">按组件约定设置图标名字</td>
+          <td class="formBodyCol">gutter</td>
+          <td class="formBodyCol">栅格间隔</td>
+          <td class="formBodyCol">number</td>
+          <td class="formBodyCol">—</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
-          <td class="formBodyCol">vi-icon-size</td>
-          <td class="formBodyCol">尺寸</td>
-          <td class="formBodyCol">String</td>
-          <td class="formBodyCol">default/small/medium/large</td>
-          <td class="formBodyCol">default</td>
+          <td class="formBodyCol">justify</td>
+          <td class="formBodyCol">flex 布局下的水平排列方式</td>
+          <td class="formBodyCol">string</td>
+          <td class="formBodyCol">end / center / around / between</td>
+          <td class="formBodyCol">start</td>
+      </tr>
+  </tbody>
+</Common-create-form>
+</ClientOnly>
+
+### Col Attributes
+
+<ClientOnly>
+<Common-create-form>
+  <thead slot="form-header" class="formHead">
+      <tr class="formHeadRow">
+          <th class="formHeadCol">参数</th>
+          <th class="formHeadCol">说明</th>
+          <th class="formHeadCol">类型</th>
+          <th class="formHeadCol">可选值</th>
+          <th class="formHeadCol">默认值值</th>
+      </tr>
+  </thead>
+  <tbody slot="form-body" class="formBody">
+      <tr class="formBodyRow">
+          <td class="formBodyCol">span</td>
+          <td class="formBodyCol">栅格占据的列数</td>
+          <td class="formBodyCol">number</td>
+          <td class="formBodyCol">—</td>
+          <td class="formBodyCol">24</td>
+      </tr>
+      <tr class="formBodyRow">
+          <td class="formBodyCol">offset</td>
+          <td class="formBodyCol">栅格左侧的间隔格数</td>
+          <td class="formBodyCol">number</td>
+          <td class="formBodyCol">—</td>
+          <td class="formBodyCol">0</td>
       </tr>
   </tbody>
 </Common-create-form>

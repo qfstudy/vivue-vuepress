@@ -1,30 +1,19 @@
 <template>
   <div>
-    <vi-row>
-      <vi-col :span="24"><div class="grid-content bg-purple-dark"></div></vi-col>
-    </vi-row>
-    <vi-row>
-      <vi-col :span="12"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="12"><div class="grid-content bg-purple-light"></div></vi-col>
-    </vi-row>
-    <vi-row>
-      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="8"><div class="grid-content bg-purple-light"></div></vi-col>
+    <vi-row :gutter="20">
+      <vi-col :span="16"><div class="grid-content bg-purple"></div></vi-col>
       <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
     </vi-row>
-    <vi-row>
-      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
-      <vi-col :span="6"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="6"><div class="grid-content bg-purple-light"></div></vi-col>
+    <vi-row :gutter="20">
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="8"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
+      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
     </vi-row>
-    <vi-row>
+    <vi-row :gutter="20">
       <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
+      <vi-col :span="16"><div class="grid-content bg-purple"></div></vi-col>
       <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
-      <vi-col :span="4"><div class="grid-content bg-purple"></div></vi-col>
-      <vi-col :span="4"><div class="grid-content bg-purple-light"></div></vi-col>
     </vi-row>
   </div>
 </template>

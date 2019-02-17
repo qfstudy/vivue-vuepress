@@ -14,10 +14,12 @@ export default {
     },
     props:{
         span:{
-            type:[Number]
+            type:[Number],
+            default: 24
         },
         offset:{
-            type:[Number]
+            type:[Number],
+            default: 0
         }
     },
     computed:{
