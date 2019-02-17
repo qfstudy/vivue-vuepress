@@ -20,31 +20,23 @@ export default {
     showToast(){
       this.$toast({
         message:'提示信息',
-        icon:{'name':'error','size':"small"},
-        autoClose:false
+        duration: 2
       })
     },
     showToast1(){
       this.$toast({
         message:'提示信息',
-        icon:{'name':'error','size':"small"},
         position: 'middle',
-        autoClose:false
+        duration: 2
       })
     },
     showToast2(){     
       this.$toast({
         message:'提示信息',
-        icon:{'name':'error',size:'small'},
-        autoClose:false,
-        position: 'bottom'
+        position: 'bottom',
+        duration: 2
       })
     }
   }
 }
 </script>
-<style scoped>
-  hr{
-    border:none;
-  }
-</style>

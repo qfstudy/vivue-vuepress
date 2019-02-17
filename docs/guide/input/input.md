@@ -203,7 +203,7 @@ pageClass: custom-page-class
           <th class="formHeadCol">说明</th>
           <th class="formHeadCol">类型</th>
           <th class="formHeadCol">可选值</th>
-          <th class="formHeadCol">默认值值</th>
+          <th class="formHeadCol">默认值</th>
       </tr>
   </thead>
   <tbody slot="form-body" class="formBody">
