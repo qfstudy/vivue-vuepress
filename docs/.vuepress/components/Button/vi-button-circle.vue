@@ -1,11 +1,11 @@
 <template>
     <div class="vi-button">
-        <vi-button icon-size="medium" icon-name="setting" circle="circle"></vi-button>
-        <vi-button icon-size="medium" icon-name="upload" circle="circle"></vi-button>
-        <vi-button icon-size="medium" icon-name="download" circle="circle"></vi-button>
-        <vi-button icon-size="medium" icon-name="search" circle="circle"></vi-button>
-        <vi-button icon-size="medium" icon-name="share" circle="circle"></vi-button>
-        <vi-button icon-size="medium" icon-name="calendar" circle="circle"></vi-button>
+        <vi-button icon-size="medium" icon-name="setting" circle></vi-button>
+        <vi-button icon-size="medium" icon-name="upload" circle></vi-button>
+        <vi-button icon-size="medium" icon-name="download" circle></vi-button>
+        <vi-button icon-size="medium" icon-name="search" circle></vi-button>
+        <vi-button icon-size="medium" icon-name="share" circle></vi-button>
+        <vi-button icon-size="medium" icon-name="calendar" circle></vi-button>
     </div>
 </template>
 

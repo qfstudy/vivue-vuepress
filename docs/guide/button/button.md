@@ -66,12 +66,12 @@ pageClass: custom-page-class
   </section>
 
   <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <vi-button disabled="disabled">默认按钮</vi-button>
-    <vi-button disabled="disabled" type="primary">主要按钮</vi-button>
-    <vi-button disabled="disabled" type="success">成功按钮</vi-button>
-    <vi-button disabled="disabled" type="info">信息按钮</vi-button>
-    <vi-button disabled="disabled" type="warning">警告按钮</vi-button>
-    <vi-button disabled="disabled" type="danger">危险按钮</vi-button>
+    <vi-button disabled>默认按钮</vi-button>
+    <vi-button disabled type="primary">主要按钮</vi-button>
+    <vi-button disabled type="success">成功按钮</vi-button>
+    <vi-button disabled type="info">信息按钮</vi-button>
+    <vi-button disabled type="warning">警告按钮</vi-button>
+    <vi-button disabled type="danger">危险按钮</vi-button>
   </highlight-code>
 </Common-code-format>
 </ClientOnly>
@@ -93,15 +93,17 @@ pageClass: custom-page-class
 
   <section slot="paraDescription" class="vi-code-description">
     <p class="vi-paraStyle-wrapper">
-        属性:<span class="vi-paraStyle">circle</span>属性值:<span class="vi-paraStyle">circle</span>
+        属性:<span class="vi-paraStyle">circle</span>可以指定图标按钮为圆形。
     </p>
   </section>
 
   <highlight-code class="codeStyle" slot="showCode" lang="vue">
-    <vi-button icon-size="medium" icon-name="setting" circle="circle"></vi-button>
-    <vi-button icon-size="medium" icon-name="upload" circle="circle"></vi-button>
-    <vi-button icon-size="medium" icon-name="download" circle="circle"></vi-button>
-    <vi-button icon-size="medium" icon-name="search" circle="circle"></vi-button>
+    <vi-button icon-size="medium" icon-name="setting" circle></vi-button>
+    <vi-button icon-size="medium" icon-name="upload" circle></vi-button>
+    <vi-button icon-size="medium" icon-name="download" circle></vi-button>
+    <vi-button icon-size="medium" icon-name="search" circle></vi-button>
+    <vi-button icon-size="medium" icon-name="share" circle></vi-button>
+    <vi-button icon-size="medium" icon-name="calendar" circle></vi-button>
   </highlight-code>
 </Common-code-format>
 </ClientOnly>
@@ -195,42 +197,42 @@ pageClass: custom-page-class
       <tr class="formBodyRow">
           <td class="formBodyCol">type</td>
           <td class="formBodyCol">类型</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">string</td>
           <td class="formBodyCol">primary / success / info / warning / danger</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">icon-name</td>
           <td class="formBodyCol">图标类名</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">string</td>
           <td class="formBodyCol">按约定取值</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">icon-size</td>
           <td class="formBodyCol">图标尺寸</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">string</td>
           <td class="formBodyCol">small / medium / large</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">icon-position</td>
           <td class="formBodyCol">图标位置</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">string</td>
           <td class="formBodyCol">right / left</td>
           <td class="formBodyCol">left</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">circle</td>
           <td class="formBodyCol">是否圆形按钮</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">boolean</td>
           <td class="formBodyCol">circle</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">disabled</td>
           <td class="formBodyCol">是否禁用状态</td>
-          <td class="formBodyCol">String</td>
+          <td class="formBodyCol">boolean</td>
           <td class="formBodyCol">disabled</td>
           <td class="formBodyCol">—</td>
       </tr>
