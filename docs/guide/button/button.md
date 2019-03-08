@@ -19,7 +19,7 @@ pageClass: custom-page-class
       基础用法
     </header>
     <p class="vi-description-text">
-      按钮类型有：默认按钮、主要按钮、成功按钮、信息按钮、警告按钮、危险按钮。通过设置<span class="add-color">type</span>属性值为<span class="add-color">primary</span>、<span class="add-color">success</span>、<span class="add-color">info</span>、<span class="add-color">warning</span>、<span class="add-color">danger</span>创建不同样式的按钮，默认值为<span class="add-color">default</span>。
+      按钮类型有：默认按钮、主要按钮、成功按钮、信息按钮、警告按钮、危险按钮。通过设置<span class="add-color">type</span>属性值为<span class="add-color">primary</span>、<span class="add-color">success</span>、<span class="add-color">info</span>、<span class="add-color">warning</span>、<span class="add-color">danger</span>创建不同样式的按钮。
     </p>
   </div>
 
@@ -29,7 +29,7 @@ pageClass: custom-page-class
 
   <section slot="paraDescription" class="vi-code-description">
     <p class="vi-paraStyle-wrapper">
-        属性:<span class="vi-paraStyle">type</span>属性值:<span class="vi-paraStyle">default</span>(默认值)、<span class="vi-paraStyle">primary</span>、<span class="vi-paraStyle">success</span>、<span class="vi-paraStyle">info</span>、<span class="vi-paraStyle">warning</span>、<span class="vi-paraStyle">danger</span>
+        属性:<span class="vi-paraStyle">type</span>属性值:<span class="vi-paraStyle">primary</span>、<span class="vi-paraStyle">success</span>、<span class="vi-paraStyle">info</span>、<span class="vi-paraStyle">warning</span>、<span class="vi-paraStyle">danger</span>
     </p>
   </section>
 
@@ -61,7 +61,7 @@ pageClass: custom-page-class
 
   <section slot="paraDescription" class="vi-code-description">
     <p class="vi-paraStyle-wrapper">
-        属性:<span class="vi-paraStyle">disabled</span>属性值:<span class="vi-paraStyle">disabled</span>例如：<span class="vi-paraStyle">disabled:"disabled"</span>
+        属性:<span class="vi-paraStyle">disabled</span>
     </p>
   </section>
 
@@ -226,14 +226,14 @@ pageClass: custom-page-class
           <td class="formBodyCol">circle</td>
           <td class="formBodyCol">是否圆形按钮</td>
           <td class="formBodyCol">boolean</td>
-          <td class="formBodyCol">circle</td>
+          <td class="formBodyCol">—</td>
           <td class="formBodyCol">—</td>
       </tr>
       <tr class="formBodyRow">
           <td class="formBodyCol">disabled</td>
           <td class="formBodyCol">是否禁用状态</td>
           <td class="formBodyCol">boolean</td>
-          <td class="formBodyCol">disabled</td>
+          <td class="formBodyCol">—</td>
           <td class="formBodyCol">—</td>
       </tr>
   </tbody>
