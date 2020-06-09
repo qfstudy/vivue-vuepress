@@ -19,4 +19,4 @@ yarn install
 
 npm run docs:dev
 ```
-[文档链接](http://vivue.qifei.site/)
+[文档链接](https://qfstudy.github.io/vivue-build-vuepress/)
